@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+char h = 97;
+while (h != 123)
+{
+putchar(h);
+h++;
+}
+return (0);
+}
