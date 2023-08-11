@@ -12,5 +12,6 @@ while (h != 123)
 putchar(h);
 h++;
 }
+putchar('\n');
 return (0);
 }
