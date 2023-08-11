@@ -7,7 +7,8 @@
  */
 int main(void)
 {
-char *command = "echo 'and that piece of art is useful\" - Dora Korpar, 2015-10-19'";
+char *command = "echo 'and that piece of art is useful\" \
+- Dora Korpar, 2015-10-19'";
 system(command);
 return (1);
 }
