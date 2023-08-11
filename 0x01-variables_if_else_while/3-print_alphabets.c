@@ -14,11 +14,11 @@ while (l != 123)
 putchar(l);
 l++;
 }
-char u = 65;
-while (u != 91)
+l = 65;
+while (l != 91)
 {
-putchar(u);
-u++;
+putchar(l);
+l++;
 }
 putchar('\n');
 return (0);
