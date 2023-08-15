@@ -7,7 +7,7 @@
  * description: searching for lower case
  * Return: Always 0 if upper 1 if lowe
  */
-int _islower(char c)
+int _islower(int c)
 {
-return (c >= 'a' && c <= 'z');
+return (c >= 97 && c <= 102);
 }
