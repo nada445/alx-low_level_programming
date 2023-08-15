@@ -3,7 +3,7 @@
 
 
 /**
- * print_to_98 -  prints all natural numbers from n to 98 followed by new line
+ * print_to_98 - prints all natural numbers from n to 98, followed by new line
  * @n: a number to start count from
  * description: count to 98
  * Return: Always 0 (Success)
@@ -22,7 +22,11 @@ else
 {
 _putchar('0' + i);
 }
+if (i != 98)
+{
 _putchar(',');
-_putchar('\n');
+_putchar(' ');
 }
+}
+_putchar('\n');
 }
