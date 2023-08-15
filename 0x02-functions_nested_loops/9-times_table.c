@@ -20,24 +20,28 @@ result = i * j;
 if (result < 10)
 {
 _putchar('0' + result);
-if (j != 9)
-{
-_putchar(',');
-_putchar(' ');
-_putchar(' ');
-}
 }
 else
 {
 _putchar('0' + result / 10);
 _putchar('0' + result % 10);
-if (j != 9)
+}
+if (i * (j + 1) >= 10 && j != 9)
 {
 _putchar(',');
 _putchar(' ');
 }
-}
-}
+else
+{
+if (j == 9)
 _putchar('\n');
+else
+{
+_putchar(',');
+_putchar(' ');
+_putchar(' ');
+}
+}
+}
 }
 }
