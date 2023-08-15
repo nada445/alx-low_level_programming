@@ -1,0 +1,1 @@
+this is a project to practise on nested loops and functions in C programming
