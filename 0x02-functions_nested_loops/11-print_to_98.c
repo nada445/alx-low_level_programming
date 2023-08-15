@@ -17,6 +17,8 @@ if (n < 0)
 n *= -1;
 for (i = n; i < 99; i++)
 {
+if (tmp < 0)
+_putchar('-');
 if (i >= 10)
 {
 _putchar('0' + i / 10);
