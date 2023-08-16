@@ -16,7 +16,7 @@ return;
 for (i = 0; i <= n; i++)
 {
 int j;
-for (j = 0; j <= i; j++)
+for (j = 0; j <= n; j++)
 {
 int result = i * j;
 if (result < 10)
@@ -31,18 +31,18 @@ else
 _putchar('0' + result / 100);
 _putchar('0' + (result % 100) / 10);
 _putchar('0' + (result % 100) % 10); }
-if (i * (j + 1) >= 100 && j != i)
+if (i * (j + 1) >= 100 && j != n)
 {
 _putchar(',');
 _putchar(' '); }
-if (i * (j + 1) >= 10 && j != i)
+if (i * (j + 1) >= 10 && j != n)
 {
 _putchar(',');
 _putchar(' ');
 _putchar(' '); }
 else
 {
-if (j == i)
+if (j == n)
 _putchar('\n');
 else
 {
