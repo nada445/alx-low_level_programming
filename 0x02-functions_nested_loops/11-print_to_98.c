@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "main.h"
 
-
 /**
  * print_to_98 - prints all natural numbers from n to 98, followed by new line
  * @n: a number to start count from
@@ -20,7 +19,12 @@ if (i < 0)
 {
 _putchar('-');
 i *= -1; }
-if (i >= 10 || i * -1 >= 10)
+if (i >= 100)
+{
+_putchar('0' + i / 100);
+_putchar('0' + (i % 100) / 10);
+_putchar('0' + (i % 100) % 10); }
+else if (i >= 10)
 {
 _putchar('0' + i / 10);
 _putchar('0' + i % 10); }
@@ -39,8 +43,7 @@ if (i >= 100)
 {
 _putchar('0' + i / 100);
 _putchar('0' + (i % 100) / 10);
-_putchar('0' + (i % 100) % 10);
-}
+_putchar('0' + (i % 100) % 10); }
 else
 {
 _putchar('0' + i / 10);
