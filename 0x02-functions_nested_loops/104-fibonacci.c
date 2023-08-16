@@ -10,7 +10,7 @@
 
 void print_Fibonacci_numbers(void)
 {
-long double i3;
+long double tmp;
 long double i2 = 2.0;
 long double i1 = 1.0;
 int counter = 2;
@@ -18,12 +18,11 @@ printf("%d, ", 1);
 printf("%d, ", 2);
 while (counter < 98)
 {
-i3 = i2 + i1;
 printf("%.0Lf", i2 + i1);
 if (counter != 97)
 printf(", ");
-long double tmp = i2;
-i2 = i3;
+tmp = i2;
+i2 = i2 + i1;
 i1 = tmp;
 counter++;
 }
