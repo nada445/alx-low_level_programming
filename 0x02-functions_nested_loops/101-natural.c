@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "main.h"
+11;rgb:0000/0000/0000#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -16,12 +16,14 @@ for (i = 0; i < 1024; i += 15)
 {
 sum += i;
 }
-for (i = 3; i < 1024 && i % 15 != 0; i += 3)
+for (i = 3; i < 1024; i += 3)
 {
+if (i % 15 != 0)
 sum += i;
 }
-for (i = 5; i < 1024 && i % 15 != 0; i += 5)
+for (i = 5; i < 1024; i += 5)
 {
+if (i % 15 != 0)
 sum += i;
 }
 printf("%d", sum);
