@@ -34,4 +34,5 @@ putchar('\n');
 int main(void)
 {
 print_multiple();
+return (0);
 }
