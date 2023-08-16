@@ -35,7 +35,7 @@ if (i * (j + 1) >= 100 && j != n)
 {
 _putchar(',');
 _putchar(' '); }
-if (i * (j + 1) >= 10 && j != n)
+else if (i * (j + 1) >= 10 && j != n)
 {
 _putchar(',');
 _putchar(' ');
