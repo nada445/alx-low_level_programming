@@ -12,14 +12,13 @@ void print_times_table(int n)
 {
 if (n > 15 || n < 0)
 return;
- int result;
 int i;
 for (i = 0; i <= n; i++)
 {
 int j;
 for (j = 0; j <= i; j++)
 {
-result = i * j;
+int result = i * j;
 if (result < 10)
 {
 _putchar('0' + result); }
