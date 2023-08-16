@@ -18,7 +18,7 @@ for (i = 2; i < 46; i++)
 {
 arr[i] = arr[i - 1] + arr[i - 2];
 }
-for (i = 0; i < 56; i++)
+for (i = 0; i < 46; i++)
 {
 printf("%d", arr[i]);
 if (i != 49)
