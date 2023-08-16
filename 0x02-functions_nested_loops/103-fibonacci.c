@@ -11,7 +11,7 @@
 void print_Fibonacci_numbers(void)
 {
 int i;
- int sum = 0;
+int sum = 0;
 int arr[50];
 arr[0] = 1;
 arr[1] = 2;
