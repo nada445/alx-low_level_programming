@@ -10,10 +10,10 @@
 
 void print_Fibonacci_numbers(void)
 {
+int i;
 int arr[50];
 arr[0] = 1;
 arr[1] = 2;
-int i;
 for (i = 2; i < 46; i++)
 {
 arr[i] = arr[i - 1] + arr[i - 2];
