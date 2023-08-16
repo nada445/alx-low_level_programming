@@ -14,11 +14,11 @@ int i;
 int arr[50];
 arr[0] = 1;
 arr[1] = 2;
-for (i = 2; i < 46; i++)
+for (i = 2; i < 45; i++)
 {
 arr[i] = arr[i - 1] + arr[i - 2];
 }
-for (i = 0; i < 46; i++)
+for (i = 0; i < 45; i++)
 {
 printf("%d", arr[i]);
 if (i != 49)
