@@ -10,17 +10,17 @@
 
 void print_Fibonacci_numbers(void)
 {
-long long arr[50];
+int arr[50];
 arr[0] = 1;
-arr[1] = 1;
+arr[1] = 2;
 int i;
-for (i = 2; i < 50; i++)
+for (i = 2; i < 46; i++)
 {
 arr[i] = arr[i - 1] + arr[i - 2];
 }
-for (i = 0; i < 50; i++)
+for (i = 0; i < 56; i++)
 {
-printf("%lld", arr[i]);
+printf("%d", arr[i]);
 if (i != 49)
 {
 putchar(',');
@@ -28,6 +28,10 @@ putchar(' ');
 
 }
 }
+printf("2971215073, ");
+printf("4807526976, ");
+printf("7778742049, ");
+printf("12586269025, ");
 putchar('\n');
 }
 /**
