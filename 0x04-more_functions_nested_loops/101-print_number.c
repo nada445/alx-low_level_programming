@@ -13,7 +13,8 @@ int j;
 int countr;
 int flag = 0;
 int tmp = 10;
-
+if ( n > 2147483647)
+return;   
 if (n < 0)
 {
 _putchar(45);
