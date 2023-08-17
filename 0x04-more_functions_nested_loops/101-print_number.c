@@ -12,7 +12,7 @@ int i;
 int j;
 int countr;
 int flag = 0;
-int tmp = 10;
+int tmp = 9;
 
 if (n < 0)
 {
