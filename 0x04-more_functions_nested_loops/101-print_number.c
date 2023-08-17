@@ -15,11 +15,11 @@ int tmp = 10;
 
 if (n < 0)
 {
-putchar('-');
+_putchar('-');
 n = -1 * n;
 }
 if (n < 10)
-putchar('0' + n);
+_putchar('0' + n);
 else
 {
 for (j = 1000000000; flag != 1; j /= 10)
@@ -31,7 +31,7 @@ int  countr = 0;
 for (i = j; countr < tmp  ; i /= 10)
 {
 countr++;
-putchar('0' + n / i);
+_putchar('0' + n / i);
 n %= i;
 }
 }
