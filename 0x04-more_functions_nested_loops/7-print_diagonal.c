@@ -20,4 +20,6 @@ void print_diagonal(int n)
 		putchar(92);
 		putchar('\n');
 	}
+	if (n <= 0)
+		putchar('\n');
 }
