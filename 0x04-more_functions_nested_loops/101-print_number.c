@@ -16,11 +16,11 @@ if (n > 2147483647)
 return;
 if (n < 0)
 {
-putchar(45);
+_putchar(45);
 n = -1 * n;
 }
 if (n < 10)
-putchar('0' + n);
+_putchar('0' + n);
 else
 {
 countr = -1;
@@ -33,7 +33,7 @@ tmp /= 10;
 for (i = _pow(10, countr); countr >= 0; i /= 10)
 {
 countr--;
-putchar('0' + n / i);
+_putchar('0' + n / i);
 n %= i;
 }
 }
@@ -47,10 +47,11 @@ n %= i;
 int _pow(int x, int y)
 {
 int i;
-
+int result;
+result = 1;
 for (i = 0; i < y; i++)
 {
-x *= x;
+result *= x;
 }
-return (x);
+return (result);
 }
