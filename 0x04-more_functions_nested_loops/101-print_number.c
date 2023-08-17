@@ -10,6 +10,7 @@ void print_number(int n)
 {
 int i;
 int j;
+int countr;
 int flag = 0;
 int tmp = 10;
 
@@ -27,7 +28,7 @@ for (j = 1000000000; flag != 1; j /= 10)
 if (n >= j)
 {
 flag = 1;
-int  countr = 0;
+countr = 0;
 for (i = j; countr < tmp  ; i /= 10)
 {
 countr++;
