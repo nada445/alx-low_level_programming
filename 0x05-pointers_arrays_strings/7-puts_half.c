@@ -32,7 +32,10 @@ int s;
 int mid;
 
 s = _strlen(str);
+if (s % 2 == 0)
 mid = s / 2;
+else
+mid = (s + 1) / 2;
 
 for (i = mid; i < s; i++)
 {
