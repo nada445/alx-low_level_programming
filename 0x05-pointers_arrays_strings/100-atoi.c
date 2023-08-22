@@ -4,19 +4,15 @@
  * @s: str to print its size
  * Return: length of string
  */
-
 int _strlen(char *s)
 {
 int i;
 int counter;
-
 counter = 0;
-
 for (i = 0; s[i] != '\0'; i++)
 {
 counter++;
 }
-
 return (counter);
 }
 /**
@@ -36,7 +32,6 @@ for (i = 0; i < b; i++)
 {
 result *= a;
 }
-
 return (result);
 }
 
@@ -55,7 +50,6 @@ int n;
 int powr;
 int idx;
 int flag;
-
 flag = 0;
 num = 0;
 powr = 0;
@@ -72,11 +66,9 @@ while (s[i] >= '0' && s[i] <= '9' && i < n)
 i++;
 powr++;
 }
-break;
-}
-}
+break; }}
 if (!flag)
-return (0);  
+return (0);
 for (i = idx; powr > 0; i++)
 {
 num += (s[i] - 48) * _pow(10, powr - 1);
