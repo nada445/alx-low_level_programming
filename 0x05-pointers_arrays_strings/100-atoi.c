@@ -1,0 +1,90 @@
+#include "main.h"
+/**
+ * _strlen - prints out the length of the str
+ * @s: str to print its size
+ * Return: length of string
+ */
+
+int _strlen(char *s)
+{
+int i;
+int counter;
+
+counter = 0;
+
+for (i = 0; s[i] != '\0'; i++)
+{
+counter++;
+}
+
+return (counter);
+}
+/**
+ * _pow - power fun
+ * @a: num1
+ * @b: num2
+ * Return: result
+ */
+int _pow(int a, int b)
+{
+int result;
+int i;
+
+result = 0;
+
+for (i = 0; i < b; i++)
+{
+result *= a;
+}
+
+return (result);
+}
+
+/**
+ * _atoi - conv str to int
+ * @s: arr of str
+ * Return: the int
+ */
+
+int _atoi(char *s)
+{
+int num;
+int i;
+int numofneg;
+int n;
+int pow;
+int idx;
+
+num = 0;
+pow = 0;
+numofneg = 0;
+n = _strlen(s);
+
+for (i = 0; i < n; i++)
+{
+if (s[i] == '-')
+numofneg++;
+}
+for (i = 0; i < n; i++)
+{
+if (s[i] >= '0' && s[i] <= '9')
+{
+idx = i;
+while (s[i] >= '0' && s[i] <= '9' && i < n)
+{
+i++;
+pow++;
+}
+break;
+}
+}
+for (i = idx; pow > 0; i++)
+{
+num += (s[i] - 48) * _pow(10, pow - 1);
+pow--;
+}
+if (numofneg % 2 != 0)
+num = -1 * num;
+
+return (num);
+}
