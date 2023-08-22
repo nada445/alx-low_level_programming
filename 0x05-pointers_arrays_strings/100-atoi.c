@@ -59,7 +59,8 @@ num = 0;
 powr = 0;
 numofneg = 0;
 n = _strlen(s);
-
+if (s[0] == '\0')
+return (0);
 for (i = 0; i < n; i++)
 {
 if (s[i] >= '0' && s[i] <= '9')
