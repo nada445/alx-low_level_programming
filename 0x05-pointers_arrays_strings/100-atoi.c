@@ -30,7 +30,7 @@ int _pow(int a, int b)
 int result;
 int i;
 
-result = 0;
+result = 1;
 
 for (i = 0; i < b; i++)
 {
@@ -52,11 +52,11 @@ int num;
 int i;
 int numofneg;
 int n;
-int pow;
+int powr;
 int idx;
 
 num = 0;
-pow = 0;
+powr = 0;
 numofneg = 0;
 n = _strlen(s);
 
@@ -65,26 +65,32 @@ for (i = 0; i < n; i++)
 if (s[i] == '-')
 numofneg++;
 }
+
 for (i = 0; i < n; i++)
 {
 if (s[i] >= '0' && s[i] <= '9')
 {
-idx = i;
+idx = i; 
 while (s[i] >= '0' && s[i] <= '9' && i < n)
 {
 i++;
-pow++;
+powr++;
 }
 break;
 }
-}
-for (i = idx; pow > 0; i++)
+
+} 
+for (i = idx; powr > 0; i++)
 {
-num += (s[i] - 48) * _pow(10, pow - 1);
-pow--;
+num += (s[i] - 48) * _pow(10, powr-1);
+powr --; 
+
 }
-if (numofneg % 2 != 0)
+
+if(numofneg % 2 != 0)
 num = -1 * num;
 
 return (num);
+
+
 }
