@@ -54,17 +54,18 @@ int numofneg;
 int n;
 int powr;
 int idx;
+int flag;
 
+flag = 0;
 num = 0;
 powr = 0;
 numofneg = 0;
 n = _strlen(s);
-if (s[0] == '\0')
-return (0);
 for (i = 0; i < n; i++)
 {
 if (s[i] >= '0' && s[i] <= '9')
 {
+flag = 1;
 idx = i;
 while (s[i] >= '0' && s[i] <= '9' && i < n)
 {
@@ -74,6 +75,8 @@ powr++;
 break;
 }
 }
+if (!flag)
+return (0);  
 for (i = idx; powr > 0; i++)
 {
 num += (s[i] - 48) * _pow(10, powr - 1);
