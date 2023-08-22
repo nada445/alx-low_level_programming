@@ -48,7 +48,7 @@ return (result);
 
 int _atoi(char *s)
 {
-int num;
+unsigned int num;
 int i;
 int numofneg;
 int n;
@@ -62,15 +62,9 @@ n = _strlen(s);
 
 for (i = 0; i < n; i++)
 {
-if (s[i] == '-')
-numofneg++;
-}
-
-for (i = 0; i < n; i++)
-{
 if (s[i] >= '0' && s[i] <= '9')
 {
-idx = i; 
+idx = i;
 while (s[i] >= '0' && s[i] <= '9' && i < n)
 {
 i++;
@@ -78,19 +72,18 @@ powr++;
 }
 break;
 }
-
-} 
+}
 for (i = idx; powr > 0; i++)
 {
-num += (s[i] - 48) * _pow(10, powr-1);
-powr --; 
-
+num += (s[i] - 48) * _pow(10, powr - 1);
+powr--;
 }
-
-if(numofneg % 2 != 0)
-num = -1 * num;
-
+for (i = 0; i < idx; i++)
+{
+if (s[i] == '-')
+numofneg++;
+}
+if (numofneg % 2 != 0)
+return (-1 * num);
 return (num);
-
-
 }
