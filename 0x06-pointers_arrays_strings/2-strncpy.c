@@ -26,11 +26,6 @@ return (i);
 char *_strncpy(char *dest, char *src, int n)
 {
 int i;
-int s;
-int k;
-
-s = _strlen(src);
-k = _strlen(dest);
 
 for (i = 0; (i < n && src[i] != '\0'); i++)
 {
