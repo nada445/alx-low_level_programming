@@ -16,24 +16,25 @@ return (i);
 }
 
 /**
- * strcmp -  compairs two strings.
- * @dest: 1st str
- * @src: 2nd str
+ * _strcmp -  compairs two strings.
+ * @s1: 1st str
+ * @s2: 2nd str
  * Return: number indicates the relation between them
  */
 int _strcmp(char *s1, char *s2)
 {
+int i;
 int sz1;
-int sz2;
 
 sz1 = _strlen(s1);
-sz2 = _strlen(s2);
 
-if (sz1 > sz2)
-return (15);
-if (sz1 < sz2)
+for (i = 0; i < sz1; i++)
+{
+if (s1[i] > s2[i])
 return (-15);
-
-return (0);
-
+if (s1[i] < s2[i])
+return (15);
 }
+return (0);
+}
+
