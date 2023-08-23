@@ -30,10 +30,8 @@ sz1 = _strlen(s1);
 
 for (i = 0; i < sz1; i++)
 {
-if (s1[i] > s2[i])
-return (-15);
-if (s1[i] < s2[i])
-return (15);
+if (s1[i] != s2[i])
+return (s1[i] - s2[i]);
 }
 return (0);
 }
