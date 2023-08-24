@@ -11,7 +11,7 @@ int i;
 int j;
 
 char arr[8];
-arr[0] = 'Q';
+arr[0] = 'O';
 arr[1] = 'L';
 arr[3] = 'E';
 arr[4] = 'A';
