@@ -42,8 +42,7 @@ carr = 0;
 
 if (s1 >= size_r || s2 >= size_r)
 {
-r = 0;
-return (r);
+return (0);
 }
 if (s1 > s2)
 {
@@ -70,7 +69,9 @@ carr = 1;
 }
 }
 if (max == size_r - 1 && carr == 1)
+{
 return (0);
+}
 if (max == size_r - 2 && carr == 1)
 {
 for (i = max+1; i > 0; i--)
