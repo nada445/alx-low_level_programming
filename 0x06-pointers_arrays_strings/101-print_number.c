@@ -11,10 +11,10 @@ unsigned int num;
 num = n;
 if (n < 0)
 {
-putchar('-');
+_putchar('-');
 num = -1 * num;
 }
 if (num / 10 != 0)
 print_number(num / 10);
-putchar('0' + num % 10);
+_putchar('0' + num % 10);
 }
