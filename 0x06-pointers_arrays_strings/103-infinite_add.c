@@ -37,6 +37,7 @@ max = s1, min = s2; }
 else
 {
 max = s2, min = s1; }
+r[max]= '\0';
 for (i = 0; i < min ; i++)
 {
 checkr = n1[s1 - 1 - i] + n2[s2 - 1 - i] - '0' - '0' + carr;
@@ -88,5 +89,4 @@ if (s1 == s2 && carr == 1)
 {
 for (i = max + 1; i > 0; i--)
 r[i] = r[i - 1], r[0] = 1 + '0'; }
-r[max + 1] = '\0';
 return (r); }
