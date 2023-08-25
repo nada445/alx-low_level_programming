@@ -27,57 +27,33 @@ return (i);
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int max;
-int carr;
-int s1;
-int s2;
-int i;
-int min;
-int checkr;
-int j;
-
-s1 = _strlen(n1);
-s2 = _strlen(n2);
-carr = 0;
-
+int max, carr, s1, s2, i, min, checkr, j;
+s1 = _strlen(n1), s2 = _strlen(n2), carr = 0;
 if (s1 >= size_r || s2 >= size_r)
-{
 return (0);
-}
 if (s1 > s2)
 {
-max = s1;
-min = s2;
-}
+max = s1, min = s2; }
 else
 {
-max = s2;
-min = s1;
-}
+max = s2, min = s1; }
 for (i = 0; i < min ; i++)
 {
 checkr = n1[s1 - 1 - i] + n2[s2 - 1 - i] - '0' - '0' + carr;
 if (checkr <= 9)
 {
 r[max - 1 - i] = checkr + '0';
-carr = 0;
-}
+carr = 0; }
 else
 {
 r[max - i - 1] = checkr - 10 + '0';
-carr = 1;
-}
-}
+carr = 1; }}
 if (max == size_r - 1 && carr == 1)
-{
 return (0);
-}
 if (max == size_r - 2 && carr == 1)
 {
-for (i = max+1; i > 0; i--)
-r[i]=r[i-1];
-r[0]=carr+'0';
-}
+for (i = max + 1; i > 0; i--)
+r[i] = r[i - 1], r[0] = carr + '0'; }
 if (s1 > s2)
 {
 for (j = s1 - s2 ; j >= 0; j--)
@@ -85,22 +61,14 @@ for (j = s1 - s2 ; j >= 0; j--)
 checkr = n1[j] + carr - '0';
 if (checkr <= 9)
 {
-r[j] = checkr + '0';
-carr = 0;
-}
+r[j] = checkr + '0', carr = 0; }
 else
 {
-r[j] = checkr - 10 + '0';
-carr = 1;
-}
-}
+r[j] = checkr - 10 + '0', carr = 1; }}
 if (carr == 1)
 {
-for (i = max+1; i > 0; i--)
-r[i]=r[i-1];
-r[0]=1+'0';
-}
-}
+for (i = max + 1; i > 0; i--)
+r[i] = r[i - 1], r[0] = 1 + '0'; }}
 if (s1 < s2)
 {
 for (j = s2 - s1 ; j >= 0; j--)
@@ -108,28 +76,17 @@ for (j = s2 - s1 ; j >= 0; j--)
 checkr = n2[j] + carr - '0';
 if (checkr <= 9)
 {
-r[j] = checkr + '0';
-carr = 0;
-}
+r[j] = checkr + '0', carr = 0; }
 else
 {
-r[j] = checkr - 10 + '0';
-carr = 1;
-}
-}
+r[j] = checkr - 10 + '0', carr = 1; }}
 if (carr == 1)
 {
-for (i = max+1; i > 0; i--)
-r[i]=r[i-1];
-r[0]=1+'0';
-}
-}
+for (i = max + 1; i > 0; i--)
+r[i] = r[i - 1], r[0] = 1 + '0'; }}
 if (s1 == s2 && carr == 1)
 {
-for (i = max+1; i > 0; i--)
-r[i]=r[i-1];
-r[0]=1+'0';
-
-}
-return (r);
-}
+for (i = max + 1; i > 0; i--)
+r[i] = r[i - 1], r[0] = 1 + '0'; }
+r[max + 1] = '\0';
+return (r); }
