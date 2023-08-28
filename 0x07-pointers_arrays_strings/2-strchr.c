@@ -23,5 +23,5 @@ return (s + i);
 }
 i++;
 } while (*(s + i) != '\0' && flag == 0);
-return (NULL);
+return ('\0');
 }
