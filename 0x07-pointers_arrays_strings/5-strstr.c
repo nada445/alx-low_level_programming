@@ -36,7 +36,7 @@ break;
 }
 istrt++;
 }
-if (flag == 1 && n == sz)
+if (flag == 1)
 return (haystack + i);
 else
 flag = 0;
