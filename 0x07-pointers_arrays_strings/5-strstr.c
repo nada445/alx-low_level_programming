@@ -14,13 +14,9 @@ int i;
 int flag;
 int istrt;
 int n;
-int sz;
 
 flag = 0;
 
-for (sz = 0; needle[sz] != '\0'; sz++)
-{
-}
 for (i = 0; haystack[i] != '\0'; i++)
 {
 if (haystack[i] == needle[0])
@@ -38,8 +34,6 @@ istrt++;
 }
 if (flag == 1)
 return (haystack + i);
-else
-flag = 0;
 }
 }
 return (NULL);
