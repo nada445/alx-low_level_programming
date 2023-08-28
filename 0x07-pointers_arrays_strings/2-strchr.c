@@ -14,10 +14,10 @@ int i;
 
 i = 0;
 
-do {
+for (i = 0; s[i] != 0; i++)
+{
 if (*(s + i) == c)
-return (s + i);
-i++;
-} while (*(s + i) != '\0');
+break;
+} 
 return (s + i);
 }
