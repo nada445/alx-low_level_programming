@@ -19,6 +19,5 @@ if (*(s + i) == c)
 return (s + i);
 i++;
 } while (*(s + i) != '\0');
-s = NULL;
-return (s);
+return (s + i);
 }
