@@ -7,25 +7,30 @@
  * Return:  pointer to the byte in s that matches one of the bytes in accept,
  * or NULL if no such byte is found
  */
-
 char *_strstr(char *haystack, char *needle)
 {
 int i;
+int istrt;
+int n;
+int tmp;
 
-for (i = 0; *haystack != '\0'; haystack += i)
+for (i = 0; *(haystack + i) != '\0'; i++)
 {
-char *hay = haystack;
-char *need = needle;
-while (*hay == *need && *need != '\0')
+if (*(haystack + i) == *(needle + 0))
 {
-hay++;
-need++;
+istrt = i;
+for (n = 0; *(needle + n) != '\0'; n++)
+{
+if (*(haystack + istrt) != *(needle + n))
+{
+break;
 }
-if (*need == '\0')
-return (haystack);
-
+istrt++;
+tmp = n;
 }
-
-return (0);
-
+if (*(needle + tmp + 1) == '\0')
+return (haystack + i);
+}
+}
+return (NULL);
 }
