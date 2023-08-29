@@ -31,5 +31,5 @@ if (*(needle + n) == '\0')
 return (haystack + i);
 }
 }
-return (NULL);
+ return (0);
 }
