@@ -17,15 +17,15 @@ int n;
 
 flag = 0;
 
-for (i = 0; haystack[i] != '\0'; i++)
+for (i = 0; *(haystack + i) != '\0'; i++)
 {
-if (haystack[i] == needle[0])
+if (*(haystack + i) == *(needle + 0))
 {
 flag = 1;
 istrt = i;
-for (n = 0; needle[n] != '\0'; n++)
+for (n = 0; *(needle + n) != '\0'; n++)
 {
-if (haystack[istrt] != needle[n])
+if (*(haystack + istrt) != *(needle + n))
 {
 flag = 0;
 break;
