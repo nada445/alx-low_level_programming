@@ -19,4 +19,6 @@ int _sqrt(int n,int guess);
 int is_prime_number(int n);
 int prim(int n,int i);
 int is_palindrome(char *s);
+int palindrome (char *s, int v, int e);
+
 #endif /* MAIN_H_INCLUDED */
