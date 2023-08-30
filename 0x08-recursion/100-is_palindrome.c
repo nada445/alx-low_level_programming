@@ -14,7 +14,7 @@ cntr = 0;
 for (i = 0; s[i] != '\0'; i++)
 {
 cntr++;
-
+}
 return (palindrome(s, 0, cntr - 1));
 }
 /**
