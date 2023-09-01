@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 
 	sum = 0;
 
-	if (argc < 2)
+	if (argc < 3)
 	{
 		printf("0\n");
 		return (0);
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-	  if (atoi(argv[i]) == 0)
+		if (atoi(argv[i]) == 0 && *argv[i] != '0')
 		{
 			printf("Error\n");
 			return (1);
@@ -34,4 +34,5 @@ int main(int argc, char *argv[])
 	}
 	printf("%d\n", sum);
 	return (0);
+
 }
