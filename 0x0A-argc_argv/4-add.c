@@ -17,13 +17,11 @@ int main(int argc, char *argv[])
 	char *tmp;
 
 	sum = 0;
-
-	if (argc < 3)
+	if(argc < 2)
 	{
-		printf("0\n");
+		printf("%d\n", 0);
 		return (0);
 	}
-
 	for (i = 1; i < argc; i++)
 	{
 		tmp = argv[i];
