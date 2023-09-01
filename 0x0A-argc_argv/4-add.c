@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 		tmp = argv[i];
 		size = strlen(tmp);
 
-		for ( j = 0; j < size; j++)
+		for (j = 0; j < size; j++)
 		{
 			if (*(tmp + j) < '0' || *(tmp + j) > '9')
 			{
