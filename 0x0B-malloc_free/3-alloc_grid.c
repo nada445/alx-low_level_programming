@@ -20,6 +20,7 @@ arr = (int **)malloc(height * sizeof(int *));
 
 if (arr == NULL)
 {
+free(*arr);
 free(arr);
 return (NULL);
 }
@@ -28,6 +29,7 @@ arr[i] = (int *)malloc(width * sizeof(int));
 
 if (arr == NULL)
 {
+free(*arr);
 free(arr);
 return (NULL);
 }
