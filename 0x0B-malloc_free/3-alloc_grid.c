@@ -27,12 +27,15 @@ return (NULL);
 for (i = 0 ; i < height; i++)
 arr[i] = (int *)malloc(width * sizeof(int));
 
-if (arr[0] == NULL)
+for (i = 0 ; i < height; i++)
+{
+if (arr[i] == NULL)
 {
 for (i = 0; i < height; i++)
 free(arr[i]);
 free(arr);
 return (NULL);
+}
 }
 for (i = 0; i < height ; i++)
 {
