@@ -15,8 +15,8 @@ char *arr;
 for (size = 0; *(str + size) != '\0'; size++)
 {
 }
-arr = (char *)malloc(size);
-if (*str == '\0')
+arr = (char *)malloc(size + 1);
+if (str == NULL)
 return (NULL);
 
 if (arr == NULL)
