@@ -15,13 +15,17 @@ int j;
 int **arr;
 
 if (width <= 0 || height <= 0)
+{
 return (NULL);
-
-arr = (int **)malloc(height * sizeof(int));
+free(arr);
+}
+arr = (int **)malloc(height * sizeof(int *));
 
 if (arr == NULL)
+{
 return (NULL);
-
+free(arr);
+}
 for (i = 0 ; i < height; i++)
 arr[i] = (int *)malloc(width * sizeof(int));
 
