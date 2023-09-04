@@ -20,7 +20,8 @@ arr = (int **)malloc(height * sizeof(int *));
 
 if (arr == NULL)
 {
-free(*arr);
+for (i = 0; i < height; i++)
+free(arr[i]);
 free(arr);
 return (NULL);
 }
@@ -29,7 +30,8 @@ arr[i] = (int *)malloc(width * sizeof(int));
 
 if (arr == NULL)
 {
-free(*arr);
+for (i = 0; i < height; i++)
+free(arr[i]);
 free(arr);
 return (NULL);
 }
