@@ -16,14 +16,10 @@ if (grid == NULL)
 free(grid);
 return;
 }
-for (i = 0 ; i < height; i++)
-{
-if (grid[i] == NULL)
-{
+
 for (i = 0; i < height; i++)
 free(grid[i]);
 free(grid);
 return;
-}
-}
+
 }
