@@ -34,7 +34,7 @@ if (str[i] != ' ' && ((str[i - 1] == ' ' && i != 0) || i == 0))
 {
 wordindx[cntr++] = i;
 }}
-arr = (char **)malloc((cntr - 1) *sizeof(char *));
+arr = (char **)malloc((cntr - 1) * sizeof(char *));
 if (arr == NULL || cntr == 0)
 {
 free(arr);
@@ -44,7 +44,7 @@ for (i = 0; i < cntr; i++)
 spccntr = 0;
 for (j = wordindx[i]; str[j] != ' '; j++)
 spccntr++;
-arr[i] = (char *)malloc(spccntr); }
+arr[i] = (char *)malloc(spccntr - 1); }
 for (i = 0; i < cntr; i++)
 {
 if (arr[i] == NULL)
