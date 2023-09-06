@@ -44,7 +44,7 @@ for (i = 0; i < cntr; i++)
 spccntr = 0;
 for (j = wordindx[i]; str[j] != ' '; j++)
 spccntr++;
-arr[i] = (char *)malloc(spccntr - 2); }
+arr[i] = (char *)malloc(spccntr - 1); }
 for (i = 0; i < cntr; i++)
 {
 if (arr[i] == NULL)
