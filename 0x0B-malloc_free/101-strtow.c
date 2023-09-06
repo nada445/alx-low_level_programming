@@ -27,14 +27,14 @@ char **arr;
 int wordindx[100], cntr, spccntr, idx, i, j;
 cntr = 0, spccntr = 0, idx = 0;
 if (str == NULL || *str == '\0')
-return (NULL); 
+return (NULL);
 for (i = 0; str[i] != '\0'; i++)
 {
 if (str[i] != ' ' && ((str[i - 1] == ' ' && i != 0) || i == 0))
 {
 wordindx[cntr++] = i;
 }}
-arr = (char **)malloc((cntr) *sizeof(char *));
+arr = (char **)malloc((cntr - 1) *sizeof(char *));
 if (arr == NULL || cntr == 0)
 {
 free(arr);
