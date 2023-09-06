@@ -41,14 +41,14 @@ for (i = 0; i < ac; i++)
 if (av[i] == NULL)
 return (NULL);
 }
-for (i = 1; i < ac; i++)
+for (i = 0; i < ac; i++)
 {
 size += _strlen(av[i]);
 }
 arr = (char *)malloc(size + 1 + ac);
 if (arr == NULL)
 return (NULL);
-for (i = 1; i < (ac); i++)
+for (i = 0; i < (ac); i++)
 {
 str = av[i];
 for (j = 0; str[j] != '\0'; j++)
