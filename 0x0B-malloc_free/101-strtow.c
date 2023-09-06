@@ -20,7 +20,7 @@ if (str[i] != ' ' && ((str[i - 1] == ' ' && i != 0) || i == 0))
 wordindx[cntr++] = i;
 }}
 arr = (char **)malloc((cntr) *sizeof(char *));
-if (arr == NULL)
+if (arr == NULL || cntr = 1)
 {
 free(arr);
 return (NULL); }
