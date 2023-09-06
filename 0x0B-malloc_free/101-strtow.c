@@ -2,6 +2,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
+ * _strlen - prints out the length of the str
+ * @s: str to print its size
+ * Return: length of string
+ */
+
+int _strlen(char *s)
+{
+int i;
+
+for (i = 0; s[i] != '\0'; i++)
+{
+}
+return (i);
+}
+/**
  * strtow - splits a string into words
  * @str: str
  * Return: pointer to array of strings
@@ -12,7 +27,7 @@ char **arr;
 int wordindx[100], cntr, spccntr, idx, i, j;
 cntr = 0, spccntr = 0, idx = 0;
 if (str == NULL || *str == '\0')
-return (NULL);
+return (NULL); 
 for (i = 0; str[i] != '\0'; i++)
 {
 if (str[i] != ' ' && ((str[i - 1] == ' ' && i != 0) || i == 0))
@@ -20,7 +35,7 @@ if (str[i] != ' ' && ((str[i - 1] == ' ' && i != 0) || i == 0))
 wordindx[cntr++] = i;
 }}
 arr = (char **)malloc((cntr) *sizeof(char *));
-if (arr == NULL || cntr = 1)
+if (arr == NULL || cntr == 0)
 {
 free(arr);
 return (NULL); }
