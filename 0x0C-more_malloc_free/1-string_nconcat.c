@@ -37,8 +37,10 @@ n = size2;
 ptr = malloc(size1 + n + 1);
 
 if (ptr == NULL)
+{
+free(ptr);
 return (NULL);
-
+}
 for (i = 0; i < size1; i++)
 ptr[i] = s1[i];
 for (i = 0; i < n; i++)
