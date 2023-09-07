@@ -19,17 +19,15 @@ size1 = 0;
 size2 = 0;
 
 if (s2 == NULL)
-*s1 = '\0';
+s1 = "";
 if (s1 == NULL)
-*s1 = '\0';
+s1 = "";
 
-for (i = 0; s1[i] != '\0'; i++)
+for (size1 = 0; s1[size1] != '\0'; size1++)
 {
-size1++;
 }
-for (i = 0; s2[i] != '\0'; i++)
+for (size2 = 0; s2[size2] != '\0'; size2++)
 {
-size2++;
 }
 if (n > size2)
 n = size2;
@@ -45,6 +43,6 @@ for (i = 0; i < size1; i++)
 ptr[i] = s1[i];
 for (i = 0; i < n; i++)
 ptr[i + size1] = s2[i];
-ptr[size1 + n] = '\0';
+ptr[size1 + i] = '\0';
 return (ptr);
 }
