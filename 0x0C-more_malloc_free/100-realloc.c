@@ -27,6 +27,11 @@ if (ptr == NULL)
 {
 ptr = malloc(new_size);
 return (ptr);
+if (ptr == NULL)
+{
+free(ptr);
+return (NULL);
+}
 }
 if (new_size < old_size)
 init = new_size;
@@ -34,9 +39,16 @@ else
 init = old_size;
 
 newptr = malloc(new_size);
+if (newptr == NULL)
+{
+free(ptr);
+free(newptr);
+return (NULL);
+}
 for (i = 0; i < init; i++)
 {
 newptr[i] = tmp[i];
 }
+free(ptr);
 return (newptr);
 }
