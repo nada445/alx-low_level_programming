@@ -16,25 +16,6 @@ for (i = 0; s[i] != '\0'; i++)
 counter++;
 return (counter); }
 /**
- * _pow - power fun
- * @a: num1
- * @b: num2
- * Return: result
- */
-int _pow(int a, int b)
-{
-int result;
-int i;
-
-result = 1;
-
-for (i = 0; i < b; i++)
-{
-result *= a;
-}
-return (result);
-}
-/**
  * main - Entry point
  * @argc: num of args
  * @argv: args
@@ -43,6 +24,7 @@ return (result);
  */
 int main(int argc, char *argv[])
 {
+int i;
 char *num1, *num2;
 unsigned long int result;
 num1 = argv[1];
@@ -51,14 +33,22 @@ if (argc != 3)
 {
 printf("Error\n");
 exit(98); }
-if (atoi(num1) / (_pow(10, _strlen(num1) - 1)) == 0 && *num1 != '0')
+for (i = 0; i < _strlen(num1); i++)
+{
+if (num1[i] < '0' || num1[i] > '9')
 {
 printf("Error\n");
-exit(98); }
-if (atoi(num2) / (_pow(10, _strlen(num2) - 1)) == 0 && *num2 != '0')
+exit(98);
+}
+}
+for (i = 0; i < _strlen(num2); i++)
+{
+if (num2[i] < '0' || num2[i] > '9')
 {
 printf("Error\n");
-exit(98); }
+exit(98);
+}
+}
 result = atoi(num1) * atoi(num2);
 printf("%lu\n", result);
 return (0); }
