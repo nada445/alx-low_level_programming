@@ -31,4 +31,5 @@ char *name;
 char *owner;
 float age;
 } dog_t;
+dog_t *new_dog(char *name, float age, char *owner);
 #endif /*  _DOG_H_INCLUDED */

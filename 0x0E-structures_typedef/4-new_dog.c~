@@ -1,0 +1,36 @@
+#include "dog.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+/**
+ * new_dog - fdovkvb
+ * @name: efv
+ * @age: fdvfdv
+ * @owner: fdvdfg
+ * Return: dog
+ */
+dog_t *new_dog(char *name, float age, char *owner)
+{
+struct dog_t *new;
+new = malloc(sizeof(struct dog_t));
+if (new == NULL)
+{
+free(new);
+return (NULL);
+}
+new->name = malloc(strlen(name) + 1);
+new->age = malloc(sizeof(float));
+new->owner = malloc(strlen(owner) + 1);
+if (!new->name || !new->age || !new->owner)
+{
+free(new->name);
+free(new->age);
+free(new->owner);
+free(new);
+return (NULL);
+}
+new->name = name;
+new->age = age;
+new->owner = owner;
+return (new);
+}
