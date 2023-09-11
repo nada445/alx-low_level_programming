@@ -33,8 +33,8 @@ free(new->name);
 free(new);
 return (NULL);
 }
-new->name = name;
+new->name = strcpy(new->name, name);
 new->age = age;
-new->owner = owner;
+new->owner = strcpy(new->owner, owner);
 return (new);
 }
