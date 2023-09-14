@@ -75,7 +75,7 @@ if (format[j] == typs[i].s[0])
 {
 typs[i].f(ap);
 if (format[j + 1])
-printf(" ,");
+printf(", ");
 }
 i++;
 }
