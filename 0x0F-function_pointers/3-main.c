@@ -28,7 +28,7 @@ printf("Error\n");
 exit(100);
 }
 ptr = get_op_func(op);
-if (!ptr)
+if (!ptr || strlen(op) > 1)
 {
 printf("Error\n");
 exit(99);
