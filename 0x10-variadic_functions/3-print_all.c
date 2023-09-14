@@ -23,9 +23,10 @@ void print_string(va_list ap)
 {
 char *str;
 str = va_arg(ap, char *);
-switch((int)(!str))
+switch ((int)(!str))
 case 1:
-str ="(nil)";
+str = "(nil)";
+
 printf("%s", str);
 }
 /**
@@ -70,16 +71,15 @@ while (format && format[j])
 i = 0;
 while (i < 4)
 {
-if(format[j] == typs[i].s[0])
+if (format[j] == typs[i].s[0])
 {
 typs[i].f(ap);
-if(format[j + 1])
+if (format[j + 1])
 printf(" ,");
 }
 i++;
 }
 j++;
 }
-
 printf("\n");
 }
