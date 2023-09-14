@@ -26,7 +26,7 @@ exit(2);
 for (j = 0; j < i; j++)
 {
 printf("%02hhx", *ptr++);
-if (j != i - 1 )
+if (j != i - 1)
 printf(" ");
 }
 printf("\n");
