@@ -12,7 +12,8 @@ int _strlen(char *s)
 	int counter;
 
 	counter = 0;
-
+	if (!s)
+		return (0);
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		counter++;
@@ -31,18 +32,17 @@ int _strlen(char *s)
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new = malloc(sizeof(list_t));
-
+	
 	if (!new)
-	{
-		free(new);
 		return (NULL);
-	}
+	if (!str)
+		new->str = NULL;
+	else
 	new->str = strdup(str);
 	new->len = _strlen(new->str);
 	new->next = *head;
 	*head = new;
-	if (!head)
-		return (NULL);
+
 	return (*head);
 
 }

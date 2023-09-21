@@ -17,7 +17,7 @@ int main(void)
     add_node(&head, "Asaia");
     add_node(&head, "Augustin");
     add_node(&head, "Bennett");
-    add_node(&head, "Bilal");
+    add_node(&head, "\0");
     add_node(&head, "Chandler");
     add_node(&head, "Damian");
     add_node(&head, "Daniel");
@@ -40,7 +40,7 @@ int main(void)
     add_node(&head, "Steven");
     add_node(&head, "Tasneem");
     add_node(&head, "William");
-    add_node(&head, "Zee");
+    add_node(&head, NULL);
     print_list(head);
     return (0);
 }
