@@ -6,6 +6,6 @@
 
 void before_main(void)
 {
-printf("You're beat! and yet, y
+printf("You're beat! and yet, y\
 ou must allow,\nI bore my house upon my back!\n");
 }
