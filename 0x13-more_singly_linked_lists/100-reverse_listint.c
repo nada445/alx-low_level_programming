@@ -6,16 +6,19 @@
  */
 listint_t *reverse_listint(listint_t **head)
 {
-	int sz = listint_len(*head);
+	listint_t *node = NULL, *tmp  = NULL;
 
 	if (!head || !(*head))
 		return (NULL);
+	node = *head;
+	*head = NULL;
 
-	while (sz)
+	while (node)
 	{
-		insert_nodeint_at_index(head, sz, (*head)->n);
-		pop_listint(head);
-		sz--;
+		tmp = node->next;
+		node->next = *head;
+		*head = node;
+		node = next;
 	}
 	return (*head);
 }
