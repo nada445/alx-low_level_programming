@@ -50,11 +50,10 @@ unsigned int binary_to_uint(const char *b)
 	int i;
 	int len = 0, pow = 0;
 
-	for (i = 0; b[i] != '\0'; i++)
-		len++;
-
 	if (!b)
 		return (0);
+	for (i = 0; b[i] != '\0'; i++)
+		len++;
 
 	for (i = len - 1; i >= 0; i--)
 	{
