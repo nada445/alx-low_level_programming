@@ -32,6 +32,6 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	if (_pow(2, index) >  *n)
 		return (1);
 
-		*n = *n  - _pow(2, index);
+	*n = *n  - _pow(2, index);
 	return (1);
 }
