@@ -58,7 +58,7 @@ unsigned int binary_to_uint(const char *b)
 
 	for (i = len - 1; i >= 0; i--)
 	{
-		if (b[i] > '9' || b[i] < '0')
+		if (b[i] != '1' && b[i] != '0')
 			return (0);
 		dec += (b[i] - 48) * _pow(2, pow);
 		pow++;
