@@ -30,9 +30,9 @@ int _strlen(char *s)
  */
 int create_file(const char *filename, char *text_content)
 {
-	int len = _strlen(text_content);
+	size_t len = _strlen(text_content);
 	int fp = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
-	int j = 0;
+	size_t j = 0;
 
 	if (fp == -1)
 		return (-1);
