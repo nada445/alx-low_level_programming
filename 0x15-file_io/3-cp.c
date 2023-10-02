@@ -59,7 +59,7 @@ int main(int ac, char **av)
 {
 	int fp1, fp2;
 	int i;
-	char buffer[8* READ_BUF_SIZE];
+	char buffer[8 * READ_BUF_SIZE];
 
 	if (ac != 3)
 	{
@@ -80,7 +80,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	while ((i = write(fp2, buffer, 1024)) > 0);
+	while ((i = write(fp2, buffer, 1024)) > 0)
 	if (i == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	i = close(fp1);
