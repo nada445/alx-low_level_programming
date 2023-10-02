@@ -41,16 +41,11 @@ int create_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (-1);
 
-	if (len)
+	if (len > 0 && write(fd, text_content, len) != len)
 	{
-	j = write(fd, text_content, len);
-		if (j != len)
-		{
-			close(fd);
-			return (-1);
-		}
- 	}
-
+	close(fd);
+	return (-1);
+	}
 	close(fd);
 	return (1);
 }
