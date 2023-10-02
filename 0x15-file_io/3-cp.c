@@ -66,21 +66,20 @@ int main(int ac, char **av)
 		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 27);
 		exit(97);
 	}
-	fp2 = open(av[2], O_WRONLY);
-	if (fp2 == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-		exit(99);
-	}
+
 	i = create_file(av[2], NULL);
 	if (i == -1)
-	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
+	fp2 = open(av[2], O_WRONLY);
+	if (fp2 == -1)
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	fp1 = open(av[1], O_RDONLY);
 	if (fp1 == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-		exit(98);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
+		i = close(fp2);
+		if (i == -1)
+			dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fp1), exit(100); }
 	i = read(fp1, &buffer[0], 1024);
 	if (i == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
